@@ -1,0 +1,244 @@
+.testimonials {
+  background-color: var(--bg-primary); /* Uses the same off-white background */
+  padding-bottom: 4rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+/* Before & After */
+.ba-header {
+  margin-bottom: 3rem;
+}
+
+.ba-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.view-gallery-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-green);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: opacity 0.2s;
+}
+
+.view-gallery-link:hover {
+  opacity: 0.8;
+}
+
+.ba-images {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.ba-image-wrapper {
+  position: relative;
+  flex: 1;
+  background-color: #eaeaea; /* slightly darker grey for the phone bg */
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ba-img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 20px;
+}
+
+.ba-label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-size: 0.6rem;
+  padding: 0.25rem 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+}
+
+.bg-dark-label {
+  background-color: var(--bg-dark);
+}
+
+.ba-divider {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.ba-arrow {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--bg-primary);
+}
+
+/* Trusted Section */
+.trusted-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.trusted-header {
+  padding-bottom: 2rem;
+}
+
+.quote-mark {
+  font-size: 4rem;
+  font-family: serif;
+  line-height: 1;
+  color: var(--text-primary);
+  margin-top: 1rem;
+}
+
+.quote-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.quote-author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.author-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.author-stars {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.video-wrapper {
+  position: relative;
+  flex: 1;
+  min-height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.2);
+}
+
+.play-btn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.play-btn:hover {
+  background: rgba(255,255,255,0.1);
+  transform: scale(1.05);
+}
+
+.video-intro-btn {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  color: white;
+  border-color: rgba(255,255,255,0.3);
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+}
+
+.video-intro-btn:hover {
+  border-color: white;
+  background: rgba(0,0,0,0.8);
+}
+
+@media (max-width: 1024px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .ba-images {
+    flex-direction: column;
+  }
+  .ba-divider {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+}
+.guarantee-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.guarantee-icon {
+  background-color: var(--bg-primary);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.guarantee-content h4 {
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.guarantee-content p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

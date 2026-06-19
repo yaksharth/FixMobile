@@ -1,0 +1,145 @@
+.select-wrapper {
+  position: relative;
+}
+
+.select-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light-muted);
+  pointer-events: none;
+}
+
+/* Custom Select Styles */
+.custom-select {
+  border: 1px solid var(--border-dark);
+  padding: 0.75rem;
+  color: var(--text-light);
+  cursor: pointer;
+  background-color: transparent;
+  user-select: none;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  transition: border-color 0.2s;
+}
+
+.custom-select:hover:not(.disabled) {
+  border-color: var(--accent-green);
+}
+
+.custom-select.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.selected-value {
+  width: 100%;
+  padding-right: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.placeholder-text {
+  color: var(--text-light-muted);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+  z-index: 100;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-box {
+  position: relative;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border-dark);
+  background-color: var(--bg-card-dark);
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 2.2rem !important;
+  border: 1px solid var(--border-dark) !important;
+  background-color: var(--bg-dark) !important;
+  color: var(--text-light) !important;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+.search-box input:focus {
+  border-color: var(--accent-green) !important;
+  outline: none;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light-muted);
+  z-index: 10;
+}
+
+.options-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.options-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.options-list::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+.options-list::-webkit-scrollbar-thumb {
+  background: var(--border-dark);
+  border-radius: 3px;
+}
+
+.options-list li {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border-dark);
+  transition: background-color 0.2s, color 0.2s;
+  color: var(--text-light); /* ensure text color */
+}
+
+.options-list li:last-child {
+  border-bottom: none;
+}
+
+.options-list li:hover {
+  background-color: var(--border-dark);
+  color: var(--accent-green);
+}
+
+.options-list li.selected {
+  background-color: var(--border-dark);
+  color: var(--accent-green);
+  font-weight: 600;
+}
+
+.no-results {
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-light-muted);
+  font-size: 0.875rem;
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <style>
+    .bg { fill: #121212; }
+    .f-shape { fill: #ffffff; opacity: 0.5; }
+    .dot { fill: #ef4444; } /* Red dot for "sad/away" state */
+  </style>
+  <rect class="bg" width="64" height="64" rx="16" />
+  <path class="f-shape" d="M20 16 h24 v8 h-16 v8 h12 v8 h-12 v12 h-8 z" />
+  <circle class="dot" cx="46" cy="46" r="6" />
+</svg>

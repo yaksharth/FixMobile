@@ -1,0 +1,111 @@
+.estimator {
+  background-color: var(--bg-card-dark);
+  color: var(--text-light);
+  border-radius: 8px;
+  padding: 4rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.estimator-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4rem;
+}
+
+.estimator-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.estimator-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.estimator-desc {
+  color: var(--text-light-muted);
+}
+
+.estimator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.estimator-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.price-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.price-tax {
+  font-size: 0.875rem;
+  color: var(--text-light-muted);
+}
+
+.result-features {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.result-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--text-light-muted);
+}
+
+.result-feature .feature-text {
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.result-feature strong {
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .estimator-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .estimator {
+    padding: 2rem;
+  }
+}
