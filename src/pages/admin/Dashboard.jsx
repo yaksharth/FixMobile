@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Users, Tool, CheckCircle, Clock } from 'lucide-react';
+import { Users, Wrench, CheckCircle, Clock } from 'lucide-react';
 import { getBookings } from '../../data/db';
 
 export default function Dashboard() {
@@ -52,7 +52,7 @@ export default function Dashboard() {
         <div className="admin-card">
           <div className="admin-card-body" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
             <div style={{ padding: '1rem', backgroundColor: '#e0e7ff', color: '#4338ca', borderRadius: '12px' }}>
-              <Tool size={24} />
+              <Wrench size={24} />
             </div>
             <div>
               <div style={{ fontSize: '2rem', fontWeight: '800' }}>{stats.diagnosing}</div>
