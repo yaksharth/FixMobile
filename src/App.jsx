@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+// Public Layouts
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import RepairDiary from './pages/RepairDiary';
@@ -15,10 +17,18 @@ import ChargingPortRepair from './pages/ChargingPortRepair';
 import CameraRepair from './pages/CameraRepair';
 import MoreServices from './pages/MoreServices';
 
+// Admin Layouts
+import AdminLayout from './components/admin/AdminLayout';
+import Login from './pages/admin/Login';
+import Dashboard from './pages/admin/Dashboard';
+import Bookings from './pages/admin/Bookings';
+import PricingManager from './pages/admin/PricingManager';
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Public Routes */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="diary" element={<RepairDiary />} />
@@ -33,6 +43,14 @@ function App() {
           <Route path="service/charging-port-repair" element={<ChargingPortRepair />} />
           <Route path="service/camera-repair" element={<CameraRepair />} />
           <Route path="service/more-services" element={<MoreServices />} />
+        </Route>
+
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<Login />} />
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="bookings" element={<Bookings />} />
+          <Route path="pricing" element={<PricingManager />} />
         </Route>
       </Routes>
     </BrowserRouter>
